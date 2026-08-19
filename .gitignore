@@ -1,0 +1,17 @@
+# Slike otpremljene kroz admin (hash imena) — čuvaju se samo lokalno.
+# Portfolio fotografije (assets/img/portfolio/) OSTAJU u repozitorijumu.
+assets/uploads/*
+!assets/uploads/.htaccess
+!assets/uploads/.gitkeep
+
+# Keš i privremeni fajlovi
+storage/*
+!storage/.gitkeep
+
+# Sistemski
+.DS_Store
+Thumbs.db
+*.log
+
+# pomoćna skripta (ne ide u repo)
+nova-git-istorija.sh

@@ -1,0 +1,17 @@
+# Sav zahtev koji nije postojeći fajl ili folder ide na index.php
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+# Zabrani direktan pristup osetljivim folderima
+RewriteRule ^(app|config|sql|storage)(/.*)?$ - [F,L]
+
+# Ne izlistavaj sadržaj foldera
+Options -Indexes
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
