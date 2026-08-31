@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#e9ddc7"/>
+  <rect x="120" y="150" width="560" height="300" rx="8" fill="#c9a875" stroke="#8a5a2b" stroke-width="6"/>
+  <line x1="400" y1="150" x2="400" y2="450" stroke="#8a5a2b" stroke-width="6"/>
+  <circle cx="360" cy="300" r="9" fill="#5b3a1c"/><circle cx="440" cy="300" r="9" fill="#5b3a1c"/>
+  <text x="400" y="520" font-family="Georgia, serif" font-size="30" fill="#8a5a2b" text-anchor="middle">Šark nameštaj po meri</text>
+</svg>

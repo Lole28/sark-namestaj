@@ -1,0 +1,221 @@
+/* ============================================================
+   Šark nameštaj po meri — dopunski stil povrh Bootstrap-a 5
+   ============================================================ */
+
+:root {
+    --sn-wood:       #8a5a2b;
+    --sn-wood-dark:  #613d1c;
+    --sn-wood-soft:  #b98a54;
+    --sn-cream:      #f7f2e8;
+    --sn-paper:      #fffdf8;
+    --sn-sand:       #e9ddc7;
+    --sn-ink:        #2c251d;
+    --sn-muted:      #7a6f5f;
+
+    --bs-primary:    #8a5a2b;
+    --bs-primary-rgb: 138, 90, 43;
+    --bs-link-color: #7a4e24;
+    --bs-link-hover-color: #613d1c;
+    --bs-body-color: #2c251d;
+    --bs-body-bg:    #f7f2e8;
+    --bs-border-color: #e2d6bf;
+}
+
+body {
+    background-color: var(--sn-cream);
+    color: var(--sn-ink);
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.sn-serif,
+h1, h2, h3, .h1, .h2, .h3 {
+    font-family: Georgia, "Times New Roman", "Iowan Old Style", serif;
+    letter-spacing: .2px;
+}
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.text-muted-2 { color: var(--sn-muted); font-weight: 400; }
+.skip-link { position: absolute; z-index: 1080; margin: .4rem; }
+
+/* --- Dugmad -------------------------------------------------- */
+.btn-sn {
+    background-color: var(--sn-wood);
+    border-color: var(--sn-wood);
+    color: #fff;
+}
+.btn-sn:hover, .btn-sn:focus {
+    background-color: var(--sn-wood-dark);
+    border-color: var(--sn-wood-dark);
+    color: #fff;
+}
+.btn-outline-sn {
+    border-color: var(--sn-wood);
+    color: var(--sn-wood-dark);
+}
+.btn-outline-sn:hover {
+    background-color: var(--sn-wood);
+    color: #fff;
+}
+
+/* --- Navbar -------------------------------------------------- */
+.sn-navbar {
+    background-color: var(--sn-paper);
+    border-bottom: 1px solid var(--bs-border-color);
+    box-shadow: 0 1px 10px rgba(44, 37, 29, .05);
+}
+.sn-navbar .navbar-brand {
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    color: var(--sn-ink);
+}
+.sn-navbar .nav-link {
+    color: var(--sn-ink);
+    font-weight: 500;
+}
+.sn-navbar .nav-link:hover,
+.sn-navbar .nav-link.active {
+    color: var(--sn-wood-dark);
+}
+
+/* --- Hero -------------------------------------------------- */
+.sn-hero {
+    background:
+        linear-gradient(rgba(44, 37, 29, .55), rgba(44, 37, 29, .72)),
+        var(--hero-img, none) center/cover no-repeat,
+        linear-gradient(120deg, #6b4423, #8a5a2b);
+    color: #fff;
+    padding: 5.5rem 0;
+}
+.sn-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    max-width: 16ch;
+}
+.sn-hero p { max-width: 52ch; font-size: 1.1rem; }
+
+.sn-section { padding: 3.5rem 0; }
+.sn-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--sn-wood);
+}
+
+/* --- Kartice radova ---------------------------------------- */
+.sn-card {
+    background: var(--sn-paper);
+    border: 1px solid var(--bs-border-color);
+    border-radius: .6rem;
+    overflow: hidden;
+    height: 100%;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+.sn-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(44, 37, 29, .12);
+}
+.sn-card .sn-thumb {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    object-fit: cover;
+    background: var(--sn-sand);
+    display: block;
+}
+.sn-card .card-body { padding: 1rem 1.1rem 1.2rem; }
+.sn-badge {
+    display: inline-block;
+    background: var(--sn-sand);
+    color: var(--sn-wood-dark);
+    border-radius: 999px;
+    padding: .15rem .7rem;
+    font-size: .78rem;
+    font-weight: 600;
+}
+
+/* --- Filter dugmad ---------------------------------------- */
+.sn-filter { display: flex; flex-wrap: wrap; gap: .5rem; }
+.sn-filter button {
+    border: 1px solid var(--sn-wood-soft);
+    background: transparent;
+    color: var(--sn-wood-dark);
+    border-radius: 999px;
+    padding: .35rem .95rem;
+    font-size: .9rem;
+    font-weight: 600;
+}
+.sn-filter button.active,
+.sn-filter button:hover {
+    background: var(--sn-wood);
+    border-color: var(--sn-wood);
+    color: #fff;
+}
+
+/* --- Galerija detalja ------------------------------------ */
+.sn-gallery-main {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: .6rem;
+    background: var(--sn-sand);
+}
+.sn-thumbs { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .6rem; }
+.sn-thumbs img {
+    width: 84px; height: 64px; object-fit: cover;
+    border-radius: .35rem; cursor: pointer;
+    border: 2px solid transparent;
+}
+.sn-thumbs img.active { border-color: var(--sn-wood); }
+
+/* --- Forme ------------------------------------------------ */
+.sn-panel {
+    background: var(--sn-paper);
+    border: 1px solid var(--bs-border-color);
+    border-radius: .6rem;
+    padding: 1.5rem;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--sn-wood-soft);
+    box-shadow: 0 0 0 .2rem rgba(138, 90, 43, .18);
+}
+
+/* --- Ocene (zvezdice) ---------------------------------- */
+.sn-stars { color: var(--sn-wood); letter-spacing: 2px; }
+.sn-rating-input { display: inline-flex; flex-direction: row-reverse; gap: .15rem; }
+.sn-rating-input input { position: absolute; opacity: 0; }
+.sn-rating-input label { font-size: 1.6rem; color: #d9cbb0; cursor: pointer; line-height: 1; }
+.sn-rating-input input:checked ~ label,
+.sn-rating-input label:hover,
+.sn-rating-input label:hover ~ label { color: var(--sn-wood); }
+
+/* --- Statusne oznake ---------------------------------- */
+.sn-status { font-size: .8rem; font-weight: 700; padding: .2rem .6rem; border-radius: 999px; }
+.sn-status.nov      { background: #e3efd8; color: #3f6b26; }
+.sn-status.u_obradi { background: #fbeecb; color: #8a6212; }
+.sn-status.zavrsen  { background: #dfe6ef; color: #3a4a63; }
+
+/* --- Footer ------------------------------------------- */
+.sn-footer {
+    background: var(--sn-wood-dark);
+    color: #f3e7d5;
+}
+.sn-footer a { color: #f3e7d5; text-decoration: underline; }
+.sn-footer a:hover { color: #fff; }
+.sn-footer h3, .sn-footer h4 { color: #fff; }
+
+/* --- Admin ------------------------------------------- */
+.sn-stat {
+    background: var(--sn-paper);
+    border: 1px solid var(--bs-border-color);
+    border-radius: .6rem;
+    padding: 1.1rem 1.25rem;
+}
+.sn-stat .n { font-size: 2rem; font-weight: 700; font-family: Georgia, serif; line-height: 1; }
+.sn-stat .l { color: var(--sn-muted); font-size: .85rem; text-transform: uppercase; letter-spacing: 1px; }
+
+.table > :not(caption) > * > * { background-color: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+    .sn-card { transition: none; }
+}
