@@ -1,5 +1,8 @@
-<section class="detail__hero">
-    <img src="<?= asset('img/portfolio/p17.jpg') ?>" alt="Dnevni boravak sa nameštajem po meri">
+<section class="detail__hero detail__hero--brand">
+    <img src="<?= asset('img/portfolio/p27.jpg') ?>" alt="Enterijer pekare — pultovi i police od pločastog materijala">
+    <div class="detail__hero-logo">
+        <img src="<?= asset('img/logo.png') ?>" alt="Šark nameštaj po meri">
+    </div>
 </section>
 
 <div class="wrap wrap--narrow section" style="padding-top:clamp(2.5rem,5vw,4rem)">
